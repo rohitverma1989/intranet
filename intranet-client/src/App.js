@@ -29,17 +29,20 @@ function App() {
           Role
         </div>
       </div>
-      <div className='row bg-warning'>
-        <div className='col'>
-          {user.name}
-        </div>
-        <div className='col'>
-          {user.age}c
-        </div>
-        <div className='col'>
-          {user.role}
-        </div>
-      </div>
+      {
+        user != null ? (<div className='row bg-warning'>
+          <div className='col'>
+            {user.name}
+          </div>
+          <div className='col'>
+            {user.age}c
+          </div>
+          <div className='col'>
+            {user.role}
+          </div>
+        </div>) : 'Loading'
+      }
+
     </div>
   );
 }
