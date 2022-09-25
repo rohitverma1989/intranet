@@ -12,7 +12,7 @@ function App() {
     axios.get('http://localhost:3001/getadmin').then((res) => {
       console.log(res.data);
       //i am setting user state here 
-      setUser(res.data);
+      setUser((state) => res.data);
     });
   }, []);
 
